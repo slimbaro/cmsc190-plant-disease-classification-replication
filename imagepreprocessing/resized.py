@@ -1,12 +1,18 @@
+#install: pip install opencv-python
+
 import os
 import cv2
 from pathlib import Path
 
 
 # paths for input and output directory
-input_dir = Path("/Users/jaerish/Documents/GitHub/cmsc190-plant-disease-classification-replication/PlantVillage-Dataset/raw/color")
-output_dir = Path("/Users/jaerish/Documents/GitHub/cmsc190-plant-disease-classification-replication/imagepreprocessing/resized_256x256_opencv/color")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
 
+input_dir = REPO_ROOT / "PlantVillage-Dataset" / "raw" / "color"
+output_dir = SCRIPT_DIR / "resized_256x256_opencv" / "color"
+
+output_dir.mkdir(parents=True, exist_ok=True)
 
 # supported extensions
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".JPG", ".JPEG", ".PNG"}

@@ -1,7 +1,9 @@
+#install: pip install tqdm
+
 import sys
 import subprocess
 
-# resolving package installment error of tqdm
+# resolving package installment error of tqdm (block can be removed if tqdm installation is succesful)
 for package in ["tqdm", "opencv-python"]:
     try:
         __import__(package.replace("-python", ""))
@@ -17,9 +19,12 @@ from tqdm import tqdm
 
 
 # paths for input and output directory
-input_dir = Path("/Users/jaerish/Documents/GitHub/cmsc190-plant-disease-classification-replication/imagepreprocessing/resized_256x256_opencv/color")
-output_dir = Path("/Users/jaerish/Documents/GitHub/cmsc190-plant-disease-classification-replication/imagepreprocessing/bgr2lab/color")
+SCRIPT_DIR = Path(__file__).resolve().parent
 
+input_dir = SCRIPT_DIR / "resized_256x256_opencv" / "color"
+output_dir = SCRIPT_DIR / "bgr2lab" / "color"
+
+output_dir.mkdir(parents=True, exist_ok=True)
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".JPG", ".JPEG", ".PNG"}
 
