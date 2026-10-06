@@ -1,5 +1,5 @@
 """
-Convert BGR image dataset to RGB format.
+Convert BGR image dataset to RGB format
 
 Input:  imagepreprocessing/gammacorrection/color
 Output: imagepreprocessing/bgr2rgb/color

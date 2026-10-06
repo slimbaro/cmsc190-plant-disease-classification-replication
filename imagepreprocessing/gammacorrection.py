@@ -1,5 +1,5 @@
 """
-Gamma Correction applied to Adaptive Median Filter (AMF) output dataset.
+Gamma Correction applied to Adaptive Median Filter (AMF) output dataset
 
 Input:  imagepreprocessing/amf/color
 Output: imagepreprocessing/gammacorrection/color
