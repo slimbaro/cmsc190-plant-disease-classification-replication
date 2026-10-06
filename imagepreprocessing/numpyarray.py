@@ -23,7 +23,7 @@ output_dir.mkdir(parents=True, exist_ok=True)
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".JPG", ".JPEG", ".PNG"}
 
-MAX_IMAGES = 20_000
+MAX_IMAGES = 10_000
 
 def convert_to_numpy(args):
    src_file, src_dir, dst_dir = args
